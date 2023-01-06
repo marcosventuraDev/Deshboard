@@ -27,6 +27,25 @@
     
 }
 
+
+
+
+body{
+    height: 100vh;
+    background: var(--body-color);
+}
+
+/* ===Sidebar=== */
+.sidebar{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+}
+
 /* ===Resuable Css=== */
 .sidebar .text{
     font-size: 16px;
@@ -40,31 +59,26 @@
     align-items: center;
 }
 
-
-
-/* ===Sidebar=== */
-
-body{
-    height: 100vh;
-    background: var(--body-color);
-}
-.sidebar{
-    position: fixed;
-    top:0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    padding: 10px 14px;
-    background: var(--sidebar-color);
-}
-
 .sidebar li{
     height: 50px;
-    background: red;
     margin-top: 10px;
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: center ;
+}
+
+.sidebar li .icon{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    font-size: 20px;
+    min-width:60px;
+}
+
+.sidebar li .icon,
+.sidebar li .text{
+    color: var(--text-color);
+    transition: var(--trans-02);
 }
 
 .sidebar header {
@@ -90,6 +104,7 @@ header .image-text .header-text{
 .header-text .name{
     font-weight: 600;
 }
+
 .header-text .profession{
     margin-top: -2px ;
 }
@@ -108,7 +123,69 @@ header .image-text .header-text{
     border-radius: 50%;
     color: var(--sidebar-color);
     font-size: 22px;
+}
 
+.sidebar .search-box{
+    background: var(--primary-color-light);
+}
+
+.search-box input{
+    height: 100%;
+    width: 100%;
+    background: var(--primary-color-light);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+
+.sidebar li a{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: var(--trans-04);
+    
+}
+
+.sidebar li a:hover{
+    background: var(--primary-color);
 
 }
 
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--sidebar-color);
+}
+
+.sidebar .menu-bar{
+   
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-bar .mode{
+    background: var(--primary-color-light);
+}
+
+.menu-bar .mode .moon-sun{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .mode i{
+    position: absolute;
+}
+.menu-bar .mode i{
+    opacity: 0;
+}
+.menu-bar .mode .toggle-switch{
+   height: 100%;
+   min-width: 60px;
+   background: red;
+}
